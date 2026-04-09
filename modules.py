@@ -23,3 +23,18 @@ def CalculateFactorial(n):
         return 1
     else:
         return n * CalculateFactorial(n - 1)
+
+
+
+
+def SolQuadratica(a, b, c):
+    discriminant = b**2 - 4*a*c
+    if discriminant < 0:
+        return "Le radici sono complesse."
+    elif discriminant == 0:
+        root = -b / (2*a)
+        return f"La radice è unica: {root}"
+    else:
+        root1 = (-b + math.sqrt(discriminant)) / (2*a)
+        root2 = (-b - math.sqrt(discriminant)) / (2*a)
+        return f"Le radici sono: {root1} e {root2}"
